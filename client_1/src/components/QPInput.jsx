@@ -18,6 +18,7 @@ const QPInput = () => {
   }
   return (
     <form onSubmit={handleQPSubmit}>
+          <p>🔑</p>
           <p>Opret privat og public keys:</p>
           <div className='flex flex-row'>
             <p>q: </p>

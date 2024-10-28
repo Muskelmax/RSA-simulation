@@ -3,7 +3,7 @@ import user from '../assets/userIcon.webp'
 
 const Relationship = () => {
   return (
-    <div className='flex justify-left flex-row mt-64'>
+    <div className='flex justify-left flex-row mt-6'>
         <div className='m-auto flex justify-center flex-row'> 
         <div>
             <img src={user} className='w-24 h-24'></img>

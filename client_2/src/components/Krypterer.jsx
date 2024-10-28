@@ -43,6 +43,7 @@ const Krypterer = () => {
   }
   return (
     <form onSubmit={handleMSubmmit}>
+      <p>🔓➡️🔒</p>
       <h1>Encrypt Message:</h1>
       <div className='flex flex-row'>
         <p>N:</p>

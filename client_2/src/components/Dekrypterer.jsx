@@ -34,6 +34,7 @@ const Dekrypterer = () => {
 };
   return (
     <form onSubmit={handleSubmit}>
+      <p>🔒+🔑➡️🔓</p>
       <h1>Decrypt Message:</h1>
       <div className='flex flex-row'>
         <p>Message:</p>

@@ -19,6 +19,7 @@ const QPInput = () => {
   return (
     <form onSubmit={handleQPSubmit}>
           <div className='flex flex-row'>
+          <p>🔑</p>
             <p>q: </p>
             <input type='number' onChange={(e) => {setQ(e.target.value)}} placeholder='primtal 1' className='border-black rounded-sm text-sm h-5 mt-1 w bg-indigo-200 mx-2 w-full'></input>
           </div>

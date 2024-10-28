@@ -7,6 +7,7 @@ const c2Information = () => {
   return (
     <div className='bg-amber-400 rounded-md inline-flex flex-row '>
       <div className='bg-amber-600 m-4 p-2 rounded-sm'>
+        <p>🔓</p>
         <p>Public Keys:</p>
         <div className='flex flex-row'>
           <p>N:</p>

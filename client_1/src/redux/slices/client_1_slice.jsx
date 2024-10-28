@@ -1,6 +1,7 @@
 import {createSlice} from '@reduxjs/toolkit'
 import axios from 'axios'
 
+
 const client_1_slice = createSlice({
   name: 'client 1 slice',
   initialState: {
@@ -23,7 +24,7 @@ const client_1_slice = createSlice({
       state.p = action.payload[1]; // Update p
       state.n = action.payload[0] * action.payload[1]; // Update N
       state.phiN = (action.payload[0]-1)*(action.payload[1]-1)
-      state.d = find_d(state.e, state.phiN)
+      state.d = egcd(state.e, state.phiN)
 
       const DB_data = {
         client: 1,
@@ -70,4 +71,25 @@ function find_d(e, phiN){
     }
   }
   return "error! Please choose different prime numbers"
+}
+
+function egcd(e, phi) {
+  let s = 0, old_s = 1;
+  let t = 1, old_t = 0;
+  let r = phi, old_r = e;
+  
+  while (r != 0) {
+      let q = Math.floor(old_r / r);
+      [r, old_r] = [old_r - q * r, r];
+      [s, old_s] = [old_s - q * s, s];
+      [t, old_t] = [old_t - q * t, t];
+  }
+  
+  // Adjust to positive if needed
+  if (old_s < 0) {
+      old_s += phi;
+  }
+  
+  // `old_s` is `d`, the modular inverse of `e` mod `phi`
+  return old_s;
 }

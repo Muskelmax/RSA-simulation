@@ -5,6 +5,7 @@ import Krypterer from './components/krypterer.jsx'
 import Dekrypterer from './components/Dekrypterer.jsx'
 import C1Information from './components/C1Information.jsx'
 import Chat from './components/Chat.jsx'
+import VideoEmbed from './components/Video_Embed.jsx'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
@@ -41,6 +42,7 @@ const App = () => {
   }, []);
   return (
     <div>
+      <VideoEmbed/>
       <div>
         <Relationship/>
         <div className='flex flex-row justify-end'>
