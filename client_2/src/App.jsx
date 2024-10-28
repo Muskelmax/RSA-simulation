@@ -17,7 +17,7 @@ const App = () => {
   useEffect(() => {
     const fetchData = async () => {
       axios
-        .get('http://localhost:5050/message')
+        .get('https://rsa-simulation.onrender.com/message')
         .then((response) => {
           // console.log(response.data.data[0].message)
           dispatch(resetMessages())
@@ -29,7 +29,7 @@ const App = () => {
           console.log(error)
         }))
       axios
-        .get('http://localhost:5050/client/1')
+        .get('https://rsa-simulation.onrender.com/client/1')
         .then((response) => {
           dispatch(newPublic([response.data.Keys[0].publicN, response.data.Keys[0].publicE]))
         })

@@ -32,7 +32,7 @@ const client_1_slice = createSlice({
         publicE: state.e
       }
 
-      axios.put('http://localhost:5050/client/1', DB_data)
+      axios.put('https://rsa-simulation.onrender.com/client/1', DB_data)
         .then((response) => {
           console.log(response)
         })

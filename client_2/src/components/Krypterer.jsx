@@ -31,7 +31,7 @@ const Krypterer = () => {
       message: emessage
     }
     axios
-      .post('http://localhost:5050/message', newMessage)
+      .post('https://rsa-simulation.onrender.com/message', newMessage)
       .then(() => {
         console.log("New message send")
         
